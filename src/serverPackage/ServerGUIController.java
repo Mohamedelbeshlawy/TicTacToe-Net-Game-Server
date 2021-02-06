@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.simple.JSONObject;
 
 public class ServerGUIController implements Initializable {
@@ -40,7 +41,11 @@ public class ServerGUIController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        updateList();
+        try {
+            updateList();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         ScoreCol.setComparator(ScoreCol.getComparator().reversed());
         PlayerList.getSortOrder().addAll(ScoreCol);
         StartServerBtn.addEventHandler(ActionEvent.ACTION, (ActionEvent e) -> {
@@ -67,7 +72,11 @@ public class ServerGUIController implements Initializable {
             }
         });
         RefreshListBtn.addEventHandler(ActionEvent.ACTION, (ActionEvent e) -> {
-            updateList();
+            try {
+                updateList();
+            } catch (JSONException jsonException) {
+                jsonException.printStackTrace();
+            }
             //vbox = playerListServerUpdatable.getVbox();
         });
     }
@@ -83,7 +92,7 @@ public class ServerGUIController implements Initializable {
         }
         return playersJson;
     }
-    private void updateList() {
+    private void updateList() throws JSONException {
         PlayerList.getItems().clear();
         playerListServer = new PlayersListForServer();
         players = PlayerSchema.getPlayersList();

@@ -16,7 +16,7 @@ public class Server {
     public Server() {
 
         try {
-            myServerSocket = new ServerSocket(5555);
+            myServerSocket = new ServerSocket(5005);
         } catch (Exception e) {
             e.printStackTrace();
         }
