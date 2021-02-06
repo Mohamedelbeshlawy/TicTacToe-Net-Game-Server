@@ -32,7 +32,7 @@ Network based TicTacToe game using Java and MySQL.
 
 ## Prerequisites
 * Java 8 or higher
-* Mysql
+* MySQL
 
 ## Installation
 For Server:
