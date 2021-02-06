@@ -6,7 +6,7 @@
 Network based TicTacToe game using Java and Mysql.
 
 
-[Clinet Repository](https://github.com/Mohamedelbeshlawy/TicTacToe-Net-Game-Client)
+[Client Repository](https://github.com/Mohamedelbeshlawy/TicTacToe-Net-Game-Client)
 
 ![image](/serverImage.PNG)
 
