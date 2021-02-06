@@ -3,7 +3,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)]()
 
 
-Network based TicTacToe game using Java and Mysql.
+Network based TicTacToe game using Java and MySQL.
 
 
 [Client Repository](https://github.com/Mohamedelbeshlawy/TicTacToe-Net-Game-Client)
